@@ -1,12 +1,12 @@
 import './App.css';
 import Auth from './Components/Auth/Auth';
-import ResetContainer from './Components/PasswordReset/Container/ResetContainer';
+import Confirm from './Components/PasswordReset/ConfirmCode/Confirm';
 
 function App() {
   return (
     <div className="App">
       {/* <Auth/> */}
-      <ResetContainer/>
+      <Confirm/>
     </div>
   );
 }

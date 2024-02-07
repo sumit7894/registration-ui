@@ -6,7 +6,8 @@ const Reset = () => {
         toast.success('Link has been sent to the given mail address!');
     }
   return (
-    <div className={styles.container}>
+    <div className={styles.main}>
+        <div className={styles.container}>
         <div className={styles.heading}>Password Reset </div>
         <div className={styles.sub__heading}>We Will Help You Reset your Password</div>
         <div className={styles.input__container}>
@@ -27,6 +28,8 @@ const Reset = () => {
         </div>
         <Toaster position="top-right" reverseOrder={false}/>
     </div>
+    </div>
+    
   )
 }
 
