@@ -15,6 +15,7 @@
     background-color: white;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     font-family: 'Inter';
 }
@@ -22,7 +23,6 @@
 {
     font-weight: 550;
     font-size: 2rem;
-    margin-top: 2.5rem;
 }
 
 .sub__heading

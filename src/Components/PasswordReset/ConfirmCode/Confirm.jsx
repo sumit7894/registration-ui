@@ -4,11 +4,8 @@ import toast, { Toaster } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 const Confirm = () => {
     const navigate = useNavigate();
-    const handleSubmit =()=>{
-        toast.success("Code verified successfully");
-        setTimeout(()=>{
-            navigate('/confirmation');
-        },900)
+    const handleReset =()=>{
+        navigate('/confirmation');
     }
     const handleResend =()=>{
         toast.success("Code Resent")
@@ -23,7 +20,7 @@ const Confirm = () => {
             <input type='text' placeholder='Enter Code'/>
         </div>
         <button className={styles.reset__button}
-        onClick={handleSubmit}
+        onClick={handleReset}
         >
             Reset Password
         </button>

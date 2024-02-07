@@ -1,14 +1,11 @@
 import React from 'react'
 import styles from './reset.module.css'
-import toast,{ ToastBar, Toaster } from 'react-hot-toast'
+import toast,{Toaster } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 const Reset = () => {
     const navigate = useNavigate();
-    const handleSubmit =()=>{
-        toast.success('Link has been sent to the given mail address!');
-        setTimeout(()=>{
-            navigate('/verification');
-        },800)
+    const handleResetButton =()=>{
+        navigate('/verification');
     }
     const handleBackButton =()=>{
         navigate('/');
@@ -23,7 +20,7 @@ const Reset = () => {
             <input type='text' placeholder='Enter Email Address'/>
         </div>
         <button className={styles.reset__button}
-        onClick={handleSubmit}
+        onClick={handleResetButton}
         >
             Reset Password
         </button>
