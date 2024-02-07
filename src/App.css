@@ -23,6 +23,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
+html {
+  font-size: 14px; /* Change this value to whatever you want */
+}
+
 body {
   line-height: 1;
 }
