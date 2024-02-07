@@ -1,8 +1,11 @@
 import React from 'react'
 import styles from './finalscreen.module.css'
-import { Toaster } from 'react-hot-toast'
+import toast,{ Toaster } from 'react-hot-toast'
 import Mail from '../../../assets/Icons/mail.png'
 const FinalScreen = () => {
+    const handleResend =()=>{
+        toast.success("Confirmation mail has been sent again!")
+    }
   return (
     <div className={styles.main}>
         <div className={styles.container}>
@@ -18,6 +21,7 @@ const FinalScreen = () => {
         Didn’t receive any mail?
         </span>
         <div className={styles.footer__button}
+        onClick={handleResend}
         >
         Resend Confirmation
         </div>
