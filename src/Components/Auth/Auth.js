@@ -2,8 +2,13 @@ import React, { useState } from 'react'
 import styles from './auth.module.css'
 import Google from '../../assets/Icons/Google.png';
 import Facebook from '../../assets/Icons/Facebook.png';
+import toast,{ Toaster } from 'react-hot-toast';
 const Auth = () => {
     const [authMode,setAuthMode] = useState(true);
+    const handleSubmit =()=>{
+        authMode ? toast.success('Successfully created an account') :
+        toast.success('Successfully Logged In')
+    }
   return (
     <div className={styles.main__auth}>
         <div className={styles.form__container}>
@@ -36,7 +41,9 @@ const Auth = () => {
                         <span>Keep me signed in</span>
                     </div>
                 )}
-                <button type='submit' className={styles.submit__button}>
+                <button type='submit' className={styles.submit__button}
+                onClick={handleSubmit}
+                >
                     {authMode ? "Create Account":"Sign In"}
                 </button>
             </form>
@@ -59,6 +66,7 @@ const Auth = () => {
             <img src={Facebook} alt='facebook'/>
             Continue with Facebook
         </div>
+        <Toaster position="top-right" reverseOrder={false}/>
         </div>
     </div>
   )
