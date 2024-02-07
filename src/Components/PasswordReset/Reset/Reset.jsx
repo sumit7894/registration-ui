@@ -1,9 +1,17 @@
 import React from 'react'
 import styles from './reset.module.css'
 import toast,{ ToastBar, Toaster } from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom'
 const Reset = () => {
+    const navigate = useNavigate();
     const handleSubmit =()=>{
         toast.success('Link has been sent to the given mail address!');
+        setTimeout(()=>{
+            navigate('/verification');
+        },800)
+    }
+    const handleBackButton =()=>{
+        navigate('/');
     }
   return (
     <div className={styles.main}>
@@ -23,7 +31,9 @@ const Reset = () => {
         <span className={styles.bottom__heading}>
             Remembered your Password?
         </span>
-        <div className={styles.footer__button}>
+        <div className={styles.footer__button}
+        onClick={handleBackButton}
+        >
             Back to Sign in
         </div>
         <Toaster position="top-right" reverseOrder={false}/>

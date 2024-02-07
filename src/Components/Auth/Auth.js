@@ -3,8 +3,16 @@ import styles from './auth.module.css'
 import Google from '../../assets/Icons/Google.png';
 import Facebook from '../../assets/Icons/Facebook.png';
 import toast,{ Toaster } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 const Auth = () => {
     const [authMode,setAuthMode] = useState(true);
+    const navigate = useNavigate();
+    const handleForgotPassword =()=>{
+        if(!authMode)
+        {
+            navigate('/password-reset');
+        }
+    }
     const handleSubmit =()=>{
         authMode ? toast.success('Successfully created an account') :
         toast.success('Successfully Logged In')
@@ -51,7 +59,7 @@ const Auth = () => {
         <label className={styles.message__footer}>
         {authMode ? "By creating account, you agree to our":<></>}
         </label>
-        <span className={styles.terms}>
+        <span className={styles.terms} onClick={handleForgotPassword}>
             {authMode ? "Terms of Service":"Forgot your password?"}
         </span>
         <div className={styles.horizontal__line}></div>

@@ -1,9 +1,14 @@
 import React from 'react'
 import styles from './confirm.module.css'
 import toast, { Toaster } from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom'
 const Confirm = () => {
+    const navigate = useNavigate();
     const handleSubmit =()=>{
         toast.success("Code verified successfully");
+        setTimeout(()=>{
+            navigate('/confirmation');
+        },900)
     }
     const handleResend =()=>{
         toast.success("Code Resent")
