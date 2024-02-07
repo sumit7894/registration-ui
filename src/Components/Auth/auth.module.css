@@ -10,7 +10,7 @@
 }
 .form__container
 {
-    height: 85vh;
+    height: 87vh;
     width: 30vw;
     background-color: white;
     display: flex;
@@ -59,8 +59,8 @@
 }
 .input__container input
 {
-    font-size: 1.2rem;
-    padding: 0.5rem;
+    font-size: 1.1rem;
+    padding: 0.6rem;
     color: #A1A7C4;
     outline: none;
     border: 1px solid #D9E1EC;
@@ -70,6 +70,17 @@
 {
     color: #5A607F;
     margin-bottom: 5px;
+}
+.checkbox__container
+{
+    color: #5A607F;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.checkbox__container input
+{
+    cursor: pointer;
 }
 .submit__button
 {
@@ -90,7 +101,6 @@
 }
 .terms
 {
-    font-size: 0.8rem;
     color: #1E5EFF;
     cursor: pointer;
 }
